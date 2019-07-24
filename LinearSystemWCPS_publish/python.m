@@ -60,8 +60,8 @@ if isempty(cmdString)
   error('No python command specified');
 elseif ispc
   %PC
-  pythonCmd = fullfile('C:','\cygwin\bin'); % correct configuration of this is critical
-  cmdString = ['python2.6.exe' cmdString];
+  pythonCmd = fullfile('C:','\cygwin64\bin'); % correct configuration of this is critical
+  cmdString = ['python2.7.exe' cmdString];
   pythonCmd = ['set PATH=',pythonCmd, ';%PATH%&' cmdString];
   [status, result] = dos(pythonCmd); % core command
 else
